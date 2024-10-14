@@ -1,7 +1,7 @@
 const toBool = (x) => x == 'true'
 const { Sequelize } = require('sequelize')
 const { existsSync } = require('fs')
-const path = require('path')
+const path = require('path') 
 const configPath = path.join(__dirname, './config.env')
 const databasePath = path.join(__dirname, './database.db')
 if (existsSync(configPath)) require('dotenv').config({ path: configPath })
@@ -31,7 +31,7 @@ module.exports = {
   SUDO: process.env.SUDO || '',
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
-  BRANCH: 'master',
+  BRANCH: 'main',
   STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
   ALWAYS_ONLINE: process.env.ALWAYS_ONLINE,
   LOG_MSG: toBool(process.env.LOG_MSG) || true,
